@@ -1,12 +1,12 @@
 /* VARIABLES */
 
 :root {
-  /* --main-font-family: "Arial", sans-serif; */
-  /* --main-text-color : #fff; */
-  /* --main-bg-color : #fff; */
-  /* --main-font-size : 16px; */
-  /* --main-font-weight : 400; */
-  /* --main-line-height : 1.5; */
+  --main-font-family: "Roboto", "Arial", sans-serif;
+  --main-text-color: #fff;
+  --main-bg-color: #fff;
+  --main-font-size: 16px;
+  --main-font-weight: 400;
+  --main-line-height: 1.5;
 }
 
 /* GENERAL */
@@ -35,7 +35,11 @@ body {
   font-weight: var(--main-font-weight);
   line-height: var(--main-line-height);
   color: var(--main-text-color);
-  background-color:var(--main-bg-color) ;
+  background-color: var(--main-bg-color);
+  background-image: url("../images/main-bg.webp");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 
 /* VISUALLY-HIDDEN */
@@ -56,7 +60,7 @@ body {
 /* CONTAINER */
 
 .container {
-  /* max-width: YOUR CONTAINER MAX-WIDTH PX HERE; */
+  max-width: 1240px;
   margin-right: auto;
   margin-left: auto;
   padding-right: 20px;
@@ -67,4 +71,282 @@ body {
 
 .site-main {
   flex-grow: 1;
+}
+
+/* Hero */
+
+.hero__inner {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  /* gap: 10px; */
+  height: 90vh;
+}
+
+.hero__users-list {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding-left: 0;
+  list-style: none;
+  overflow: auto;
+}
+
+.hero__users-item {
+  position: relative;
+  background: rgba(255, 255, 255, 0.06);
+  box-shadow: inset 0px 1px 2px rgb(239 232 232 / 60%);
+  backdrop-filter: blur(30px);
+  border-radius: 20px;
+  color: #fff;
+  margin-top: 20px;
+  margin-left: 10px;
+  margin-right: 10px;
+  padding: 25px;
+}
+
+.hero__user-id {
+  position: absolute;
+  top: 0;
+  left: 20px;
+  z-index: 2;
+  font-size: 60px;
+  color: #80a7f1;
+}
+
+.hero__users-title {
+  margin-top: 0;
+  margin-bottom: 20px;
+  font-size: 26px;
+  line-height: 30px;
+  text-align: right;
+  color: #6adaf6;
+}
+
+.hero__users-username {
+  margin-top: 0;
+  margin-bottom: 15px;
+  font-size: 24px;
+  line-height: 28px;
+  text-align: right;
+}
+
+.hero__users-info {
+  font-size: 22px;
+}
+
+.hero__users-info-list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  row-gap: 15px;
+  margin: 15px 0;
+  padding-left: 0;
+  list-style: none;
+}
+
+.hero__users-address {
+  display: inline-block;
+}
+
+.hero__users-info-link {
+  display: inline-flex;
+  align-items: center;
+  padding: 4px 8px;
+  font-style: normal;
+  color: aqua;
+  text-decoration: none;
+  border: 1px solid wheat;
+  border-radius: 8px;
+}
+
+.hero__users-info-link::before {
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+  content: "";
+  margin-right: 10px;
+  background-image: url("../images/icons/phone-icon.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+.user-info-link-location::before {
+  background-image: url("../images/icons/location.png");
+}
+
+.user-info-link-email::before {
+  background-image: url("../images/icons/email-icon.png");
+}
+
+.user-info-link-website::before {
+  background-image: url("../images/icons/website-icon.png");
+}
+
+.hero__company-info {
+  font-size: 22px;
+}
+
+.hero__company-name {
+  margin-top: 5px;
+  margin-bottom: 18px;
+  padding-left: 30px;
+  background-image: url("../images/icons/company-icon.png");
+  background-repeat: no-repeat;
+  background-position: left center;
+  background-size: 25px 25px;
+}
+
+.hero__users-btn {
+  display: block;
+  margin-left: auto;
+  font-weight: 700;
+  border: none;
+  background-color: transparent;
+  color: rgb(210, 6, 6);
+  cursor: pointer;
+}
+
+.hero__users-btn:hover {
+  text-decoration: underline;
+}
+
+.hero__posts-list {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding-left: 0;
+  list-style: none;
+  overflow: auto;
+}
+
+.hero__posts-item {
+  position: relative;
+  background: rgba(255, 255, 255, 0.06);
+  box-shadow: inset 0px 1px 2px rgb(239 232 232 / 60%);
+  backdrop-filter: blur(30px);
+  border-radius: 20px;
+  color: #fff;
+  margin-top: 20px;
+  margin-left: 10px;
+  margin-right: 10px;
+  padding: 25px;
+}
+
+.hero__posts-number {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  z-index: 2;
+  font-size: 30px;
+  color: #80a7f1;
+}
+
+.hero__posts-title {
+  max-width: 90%;
+  margin-top: 0;
+  margin-bottom: 20px;
+  font-size: 18px;
+  line-height: 22px;
+  color: #6adaf6;
+}
+
+.hero__posts-text {
+  margin-top: 15px;
+  margin-bottom: 0;
+}
+
+.hero__posts-btn {
+  display: block;
+  margin-left: auto;
+  font-weight: 700;
+  border: none;
+  background-color: transparent;
+  color: rgb(210, 6, 6);
+  cursor: pointer;
+}
+
+.hero__posts-btn:hover {
+  text-decoration: underline;
+}
+
+.hero__comments-list {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding-left: 0;
+  list-style: none;
+  overflow: auto;
+}
+
+.hero__comments-item {
+  position: relative;
+  background: rgba(255, 255, 255, 0.06);
+  box-shadow: inset 0px 1px 2px rgb(239 232 232 / 60%);
+  backdrop-filter: blur(30px);
+  border-radius: 20px;
+  color: #fff;
+  margin-top: 20px;
+  padding: 25px;
+}
+
+.hero__comment-number {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  z-index: 2;
+  font-size: 30px;
+  color: #80a7f1;
+}
+
+.hero__comments-title {
+  max-width: 90%;
+  margin-top: 0;
+  margin-bottom: 20px;
+  font-size: 18px;
+  line-height: 22px;
+  color: #6adaf6;
+}
+
+.hero__comments-text {
+  margin-top: 0;
+  margin-bottom: 15px;
+}
+
+.hero__comments-email {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  color: aquamarine;
+}
+
+.hero__comments-email::before {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  content: "";
+  margin-right: 5px;
+  background-image: url("../images/icons/email-icon.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #4c9689;
+  border-radius: 8px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
 }

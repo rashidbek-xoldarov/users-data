@@ -1,43 +1,123 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Template project</title>
-  <!-- <link rel="stylesheet" href="./css/normalize.css"> -->
-  <!-- <link rel="stylesheet" href="./css/main.css"> -->
-  <link rel="stylesheet" href="./css/main.min.css">
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <title>Template project</title>
+    <link rel="stylesheet" href="./css/normalize.css" />
+    <link rel="stylesheet" href="./css/main.css" />
+    <!-- <link rel="stylesheet" href="./css/main.min.css"> -->
+  </head>
+  <body>
+    <!-- Site main start -->
 
+    <main class="site-main">
+      <!-- Hero section start -->
+      <section class="hero">
+        <div class="container">
+          <div class="hero__inner">
+            <ol class="hero__users-list"></ol>
+            <ul class="hero__posts-list">
+              <img
+                src="https://loading.io/asset/615413"
+                alt="animate"
+                width="300"
+                height="800"
+              />
+            </ul>
+            <ul class="hero__comments-list"></ul>
+          </div>
+        </div>
+      </section>
+      <!-- Hero section finish -->
+    </main>
 
-  <!-- Site header start -->
-  <header class="site-header">
-    <!-- Your header code here -->
-  </header>
-  <!-- Site header finish -->
+    <!-- Site main finish -->
 
-  <!-- Site main start -->
+    <!-- Templates -->
+    <template class="users-template">
+      <li class="hero__users-item">
+        <span class="hero__user-id">1</span>
+        <h3 class="hero__users-title">Rashidbek</h3>
+        <p class="hero__users-username">Xoldarov</p>
+        <strong class="hero__users-info">User Info</strong>
+        <ul class="hero__users-info-list">
+          <li class="hero__users-info-item">
+            <address class="hero__users-address">
+              <a
+                class="hero__users-info-link user-info-link-location"
+                target="_blank"
+                href=""
+                >Geo location</a
+              >
+            </address>
+          </li>
+          <li class="hero__users-info-item">
+            <a
+              class="hero__users-info-link user-info-link-phone"
+              target="_blank"
+              href=""
+              >Phone number</a
+            >
+          </li>
+          <li class="hero__users-info-item">
+            <a
+              class="hero__users-info-link user-info-link-website"
+              target="_blank"
+              href=""
+              >Website</a
+            >
+          </li>
+          <li class="hero__users-info-item">
+            <a
+              class="hero__users-info-link user-info-link-email"
+              target="_blank"
+              href=""
+              >Email</a
+            >
+          </li>
+        </ul>
+        <strong class="hero__company-info">Company Info</strong>
+        <h4 class="hero__company-name">Romaguera-Crona</h4>
+        <p class="hero__company-text">Multi-layered client-server neural-net</p>
+        <button class="hero__users-btn">Show user posts</button>
+      </li>
+    </template>
 
-  <main class="site-main">
+    <template class="posts-template">
+      <li class="hero__posts-item">
+        <span class="hero__posts-number">1</span>
+        <h3 class="hero__posts-title">non est facere</h3>
+        <p class="hero__posts-text">
+          molestias id nostrum excepturi molestiae dolore omnis repellendus
+          quaerat saepe consectetur iste quaerat tenetur asperiores accusamus ex
+          ut nam quidem est ducimus sunt debitis saepe
+        </p>
+        <button class="hero__posts-btn">Show post comments</button>
+      </li>
+    </template>
 
-    <!-- Hero section start -->
-    <section class="hero">
-      <!-- Your hero section code here -->
-    </section>
-    <!-- Hero section finish -->
+    <template class="comments-template">
+      <li class="hero__comments-item">
+        <span class="hero__comment-number">1</span>
+        <h3 class="hero__comments-title">
+          et adipisci aliquam a aperiam ut solut
+        </h3>
+        <p class="hero__comments-text">
+          est officiis placeat id et iusto ut fugit numquam eos aut voluptas ad
+          quia tempore qui quibusdam doloremque recusandae tempora qui
+        </p>
+        <a class="hero__comments-email" href="">email</a>
+      </li>
+    </template>
 
-  </main>
-
-  <!-- Site main finish -->
-
-  <!-- Site footer start -->
-
-  <footer class="site-footer">
-    <!-- Your footer code here -->
-  </footer>
-
-  <!-- Site footer finish -->
-</body>
+    <script src="./js/main.js"></script>
+  </body>
 </html>
